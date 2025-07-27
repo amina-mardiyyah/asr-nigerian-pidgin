@@ -35,6 +35,8 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet"
+      href="./static/css/style_bullet.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -121,49 +123,74 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
+
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2010.11123"
-                   class="external-link button is-normal is-rounded is-light">
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="external-link button is-normal is-rounded is-light">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
                 </a>
-              </span>
+              </span> -->
+              
+              <!-- arXiv Link. -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2010.11123"
-                   class="external-link button is-normal is-rounded is-light">
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="external-link button is-normal is-rounded is-light"
+                    style="background-color: rgba(239, 205, 190, 0.689);">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
               </span>
+
+            
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/amina-mardiyyah/ASR-Nigeria-Pidgin"
-                   class="external-link button is-normal is-rounded is-light">
+                <!-- "https://github.com/amina-mardiyyah/ASR-Nigeria-Pidgin" -->
+                <a href="https://amina-mardiyyah/asr-nigerian-pidgin.github.io" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="external-link button is-normal is-rounded is-light"
+                    style="background-color: rgba(240, 235, 193, 0.689);">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
                   </a>
               </span>
+
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/amina-mardiyyah/ASR-Nigeria-Pidgin"
-                class="external-link button is-normal is-rounded is-light">
+                <a href="https://huggingface.co/asr-nigerian-pidgin"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="external-link button is-normal is-rounded is-light"
+                    style="background-color: rgba(200, 237, 191, 0.689);">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
                   </a>
               </span>
+
               <!-- Demo Link. -->
               <span class="link-block">
-                <a href="https://57063917365924a452.gradio.live"
-                   class="external-link button is-normal is-rounded is-light">
+                <!-- "https://57063917365924a452.gradio.live" -->
+                <a href="https://huggingface.co/asr-nigerian-pidgin"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="external-link button is-normal is-rounded is-light"
+                    style="background-color: rgba(192, 227, 239, 0.689);"
+                    >
+                    
                   <span class="icon">
                       <i class="fas fa-desktop"></i>
                   </span>
@@ -213,14 +240,21 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-5">Key Contribution:</h2>
-            <span> This</span> key contributions of this work includes;
-            <ol>
-            <li> Provide a publicly accessible (end-to-end) ASR system for Nigerian Pidgin </li> 
-            <li> Provide a free speech corpus for Nigerian Pidgin </li> 
-            <li> Present the first parallel (speech-to-text) data on the language as a benchmark for
-              further research. </li> 
-            </ol>
+      <!-- <h2 class="title is-5"> 💡 Key Contributions</h2> -->
+            <!-- <span> This</span> key contributions of this work includes; -->
+            <!-- <ul>
+            <li> 🌐  A publicly accessible ASR system for Nigerian Pidgin </li> 
+            <li> 🗣️  Free speech corpus for Nigerian Pidgin </li> 
+            <li> 📝  First parallel (speech-to-text) Nigerian Pidgin data as a benchmark for further research. </li> 
+            </ul> -->
+
+      <h2 class="title is-5">  Key Contributions</h2>       
+            <ul class="emoji-bullet-list">
+              <li class="emoji-asr">   A publicly accessible ASR system for Nigerian Pidgin </li> 
+              <li class="emoji-speech">  Free speech corpus for Nigerian Pidgin </li> 
+              <li class="emoji-data">  First parallel (speech-to-text) Nigerian Pidgin data </li> 
+              </ul>
+    
 
       <!-- <div id="results-carousel" class="carousel results-carousel"> -->
           <!-- <div class="item item-steve"> -->
@@ -302,14 +336,12 @@
             This yielded a higher WER of 73.7%.
           </p>
           <p>
-            By adapting this architecture to nuances represented
-            in our dataset, we reduce error by 59.84%. Our dataset comprises 4,288 recorded utterances 
-            from 10 native speakers, partitioned into training, validation, and test sets. This
-            study underscores the potential for improving ASR systems for under-resourced languages
-            like Nigerian Pidgin English, contributing to greater inclusion in speech technology applica-
-            tions. We publicly release our unique parallel dataset (speech-to-text) on Nigerian Pidgin,
-            as well as the model weights on Hugging Face. Our code would be made available to foster
-            future research from the community.
+            By adapting this architecture to nuances represented in our dataset, we reduce error by 59.84%.
+            This study underscores the potential for improving ASR systems for under-resourced languages
+            like Nigerian Pidgin English, contributing to greater inclusion in speech technology applications. 
+            We publicly release our unique parallel dataset (speech-to-text) on Nigerian Pidgin,
+            as well as the model weights on Hugging Face. 
+            Our code would be made available to foster future research from the community.
           </p>
         </div>
       </div>
@@ -335,7 +367,6 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-
     <div class="columns is-centered">
 
       <!-- Visual Effects. -->
@@ -354,21 +385,61 @@
       </div> -->
       <!--/ Visual Effects. -->
 
-      <!-- How it works. -->
+      <!-- How it works  -->
+
+      <!-- Dataset -->
       <div class="column">
-        <h2 class="title is-3">How it works</h2>
+        <h2 class="title is-3"> Dataset </h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              We evaluated our data set on three (3) state-of-the-art architectures; Nemo QuartzNet,
-              Wav2Vec 2.0, and Wav2Vec XLSR.
+            The proposed dataset consists of the following;
+            <ul>
+              <li> 4,288 recorded utterances collected from 10 native speakers </li>
+              <li> LIG-Aikuma app was used for recording the text data  </li>
+              <li> Each uttereance averages between 8 and 17 words </li>
+              <li> The average sentence length in the corpus is 86 characters </li>
+              <li> The corresponding mean audio duration is approximately 17 seconds</li>
+              <li> The dataset is partitioned into training, validation, and test sets </li>
+
+            </ul>
+             
+            
             </p>
+              <!-- <ul>
+                <li> XLSR-English (zero-shot baseline) </li>
+                <li> Nemo QuartzNet </li>
+                <li> Wav2Vec 2.0 Base-100h </li> 
+                <li> Wav2Vec XLSR-53 </li>
+              </ul> -->
             <!-- <video id="matting-video" controls playsinline height="100%">
               <source src="./static/videos/matting.mp4"
                       type="video/mp4">
             </video> -->
           </div>
+        </div>
+      </div>
+    </div>
 
+      <!-- Model Architecture -->
+      <div class="column">
+        <h2 class="title is-3"> Model Architecture </h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Several state-of-the-art ASR model architectures were evaluated. This includes; 
+            </p>
+              <ul>
+                <li> XLSR-English (zero-shot baseline) </li>
+                <li> Nemo QuartzNet </li>
+                <li> Wav2Vec 2.0 Base-100h </li> 
+                <li> Wav2Vec XLSR-53 </li>
+              </ul>
+            <!-- <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/matting.mp4"
+                      type="video/mp4">
+            </video> -->
+          </div>
         </div>
       </div>
     </div>
