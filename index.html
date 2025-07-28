@@ -10,7 +10,8 @@
   <meta name="keywords" content="ASR, Nigerian Pidgin English, End-to-End">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Towards End-to-End Training of Automatic Speech Recognition for Nigerian Pidgin</title>
-
+ 
+  <!-- Do not uncomment -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
   
@@ -448,15 +449,19 @@
               <li> The average sentence length in the corpus is 86 characters </li>
               <li> The corresponding mean audio duration is approximately 17 seconds</li>
               <li> The dataset is partitioned into training, validation, and test sets </li>
-
             </ul>
-
-            
             </p>
-            <!-- <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video> -->
+
+            <!-- Figure 3: Topic Distribution in Dataset -->
+            <figure id = "topic-distribution-dataset">
+              <img src="./static/images/topic_distribution.svg" alt="Topic distribution for dataset " style="width: 100%; max-width: 800px; border-radius: 8px;">
+            </figure>
+
+            <!-- Figure 4: Data Collection Summary -->
+            <figure id = "data-collection-summary">
+              <img src="./static/images/data_collection_summary.svg" alt="Data collection summary " style="width: 100%; max-width: 800px; border-radius: 8px;">
+            </figure>
+
           </div>
         </div>
       </div>
@@ -475,10 +480,6 @@
                 <li> Wav2Vec 2.0 Base-100h </li> 
                 <li> Wav2Vec XLSR-53 </li>
               </ul>
-            <!-- <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4"> -->
-            </video>
           </div>
         </div>
       </div>
@@ -512,6 +513,11 @@
       <figure id = "table-1-qualitative-results-all-models">
         <img src="./static/images/table_1_results.png" alt="Table 1: Qualitative results for all models " style="width: 100%; max-width: 800px; border-radius: 8px;">
         <img src="./static/images/table_1_results_contd.png" alt="Table 1: Qualitative Results Contd." style="width: 100%; max-width: 800px; border-radius: 8px;">
+      </figure>
+
+      <!-- Figure 3: Model Comparison for all models -->
+      <figure id = "model-comparison-all-models">
+        <img src="./static/images/model_comparison.svg" alt="Model Comparison for all models " style="width: 100%; max-width: 800px; border-radius: 8px;">
       </figure>
 
       <!-- Table 2: Quantitative Results for Wav2Vec XLSR-53 -->
@@ -677,8 +683,12 @@
           </p>
           <p>
             The website source code is available on the <a
-              href="https://github.com/nerfies/nerfies.github.io">Nerflies</a> Github page.
-            Plesae ensure you reference them appropriately if you do reuse their source code.
+              href="https://github.com/nerfies/nerfies.github.io">Nerflies</a> Github page. 
+              Please ensure you reference them appropriately if you do reuse their source code.
+              Reference was also made to the <a
+              href="https://t2v-turbo.github.io">t2v-turbo</a> and  <a
+              href="https://t2v-turbo-v2.github.io">t2v-turbo-v2</a> websites.
+            
           </p>
         </div>
       </div>
