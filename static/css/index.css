@@ -155,3 +155,11 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+/* .emoji-asr::before { content: "🌐"; }
+.emoji-speech::before { content: "🗣️"; }
+.emoji-data::before { content: "📝"; } */
+
+/* html {
+  scroll-behavior: smooth;
+} */
