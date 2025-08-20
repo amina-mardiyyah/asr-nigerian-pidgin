@@ -104,14 +104,14 @@
               <a href="https://amina-mardiyyah.github.io"
               target="_blank" 
               rel="noopener noreferrer">
-              Amina Mardiyyah Rufai</a><sup>1*</sup>,
+              Amina Mardiyyah Rufai</a><sup>1</sup>,
             </span>
             
             <span class="author-block">
               <a href="https://www.linkedin.com/in/abeeb-afolabi-b07a75135/" 
               target="_blank" 
               rel="noopener noreferrer">
-              Afolabi Abeeb</a><sup>2*</sup>,
+              Afolabi Abeeb</a><sup>2</sup>,
             </span>
             
             <span class="author-block">
@@ -148,9 +148,9 @@
             <span class="author-block"><sup>2</sup>Ladoke Akintola University of Technology</span>
           </div>
 
-          <div class="is-size-6 publication-authors">
+          <!-- <div class="is-size-6 publication-authors">
             <span class="author-block"><sup>*</sup>Equal Contribution</span>
-          </div>
+          </div> -->
 
           <div class="is-size-5 publication-authors">
             <b>DLI 2025</b>
@@ -226,6 +226,23 @@
           </a>
         </span>
 
+              <!-- Poster Link. -->
+              <span class="link-block" style="margin: 0.5em 0; display: inline-block;">
+                <a href="static/images/Final_DLI_2025_Paper_26_Poster_Presentation_Submission.pdf"
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                <button id="poster-button"
+                        class="external-link button is-normal is-rounded is-light"
+                        style="background-color: rgba(229, 217, 236, 0.689);">
+                <span class="icon">
+                    <i class="fas fa-desktop"></i>
+                </span>
+              <span><b>Poster</b></span>
+            </button>
+          </a>
+        </span>
+
+
 
               <!--Paper citation Link. -->
               <span class="link-block" style="margin: 0.5em 0; display: inline-block;">
@@ -280,7 +297,12 @@
                 type="video/mp4">
       </video> -->
       <h2 class="subtitle has-text-centered">
-        <span class="ASR">Pidgin</span> English is widely spoken in Africa by an estimate of 75 million Nigerian speakers and 5 million Ghanaians.
+        <!-- <span class="ASR">Pidgin</span> English is widely spoken in Africa by an estimate of 75 million Nigerian speakers and 5 million Ghanaians. -->
+        </span> 
+        Pidgin English is widely spoken in Africa by an estimate of 75 million Nigerian speakers and 5 million Ghanaians but Africa <strong>lack</strong> sufficient resources to support automatic speech recognition systems on this language. 
+        We <strong>curate</strong> a novel Nigerian Pidgin text-to-speech dataset, show that a pretrained state-of-the-art 
+        model do not work well out-of-the-box, and
+        <strong>reduce error rate by 59.84%</strong> 🚀
       </h2>
     </div>
   </div>
@@ -299,11 +321,11 @@
             </ul> -->
 
       <h2 class="title is-5">  Key Contributions</h2>       
-            <ul class="emoji-bullet-list">
+            <!-- <ul class="emoji-bullet-list"> -->
               <li class="emoji-asr">   A publicly accessible ASR system for Nigerian Pidgin </li> 
               <li class="emoji-speech">  Free speech corpus for Nigerian Pidgin </li> 
               <li class="emoji-data">  First parallel (speech-to-text) Nigerian Pidgin data </li> 
-              </ul>
+              <!-- </ul> -->
     
 
       <!-- <div id="results-carousel" class="carousel results-carousel"> -->
@@ -480,7 +502,7 @@
                 <li> XLSR-English (zero-shot baseline) </li>
                 <li> Nemo QuartzNet </li>
                 <li> Wav2Vec 2.0 Base-100h </li> 
-                <li> Wav2Vec XLSR-53 (our final) </li>
+                <li> Wav2Vec XLSR-53 (our final model) </li>
               </ul>
           </div>
         </div>
@@ -495,7 +517,7 @@
       <p>
         Word Error Rate (WER) was used to evaluate 
         performance, with Wav2Vec XLSR-53 achieving 
-        the lowest WER and effectively capturing key 
+        the lowest WER and effectively capturing Nigerian 
         Pidgin terms, though it struggled with accurate 
         number recognition. The WER formula is given as follows;    
         </p>
