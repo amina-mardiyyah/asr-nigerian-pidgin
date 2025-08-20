@@ -1,662 +1,704 @@
 <!-- Website Modification started on 22nd July 2025 at 9:03pm 
      by Oluwabukola Adegboro & Daniel Ajisafe -->
 
-     <!DOCTYPE html>
-     <html>
-     <head>
-       <meta charset="utf-8">
-       <meta name="description"
-             content="Towards End-to-End Training of Automatic Speech Recognition for Nigerian Pidgin">
-       <meta name="keywords" content="ASR, Nigerian Pidgin English, End-to-End">
-       <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Towards End-to-End Training of Automatic Speech Recognition for Nigerian Pidgin</title>
-      
-       <!-- Do not uncomment -->
-       <!-- Global site tag (gtag.js) - Google Analytics -->
-       <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
-       
-       <script>
-         window.dataLayer = window.dataLayer || [];
-     
-         function gtag() {
-           dataLayer.push(arguments);
-         }
-     
-         gtag('js', new Date());
-     
-         gtag('config', 'G-PYVRSFMDRL');
-       </script>
-     
-       <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-             rel="stylesheet">
-     
-       <link rel="stylesheet" href="./static/css/bulma.min.css">
-       <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-       <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-       <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-       <link rel="stylesheet"
-             href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-       <link rel="stylesheet"
-           href="./static/css/style_bullet.css">
-       <link rel="stylesheet" href="./static/css/index.css">
-       <link rel="icon" href="./static/images/favicon.svg">
-     
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-       <script defer src="./static/js/fontawesome.all.min.js"></script>
-       <script src="./static/js/bulma-carousel.min.js"></script>
-       <script src="./static/js/bulma-slider.min.js"></script>
-       <script src="./static/js/index.js"></script>
-     
-     </head>
-     
-     <body>
-     
-     <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-       <div class="navbar-brand">
-         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-           <span aria-hidden="true"></span>
-           <span aria-hidden="true"></span>
-           <span aria-hidden="true"></span>
-         </a>
-       </div>
-       <div class="navbar-menu">
-         <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-           <a class="navbar-item" href="https://keunhong.com">
-           <span class="icon">
-               <i class="fas fa-home"></i>
-           </span>
-           </a>
-     
-           <div class="navbar-item has-dropdown is-hoverable">
-             <a class="navbar-link">
-               More Research
-             </a>
-             <div class="navbar-dropdown">
-               <a class="navbar-item" href="https://hypernerf.github.io">
-                 HyperNeRF
-               </a>
-               <a class="navbar-item" href="https://nerfies.github.io">
-                 Nerfies
-               </a>
-               <a class="navbar-item" href="https://latentfusion.github.io">
-                 LatentFusion
-               </a>
-               <a class="navbar-item" href="https://photoshape.github.io">
-                 PhotoShape
-               </a>
-             </div>
-           </div>
-         </div>
-     
-       </div>
-     </nav> -->
-     
-     
-     <section class="hero">
-       <div class="hero-body">
-         <div class="container is-max-desktop">
-           <div class="columns is-centered">
-             <div class="column has-text-centered">
-               <h1 class="title is-2 publication-title">Towards End-to-End Training of Automatic Speech Recognition for Nigerian Pidgin</h1>
-               <div class="is-size-5 publication-authors">
-                 
-                 <span class="author-block">
-                   <a href="https://amina-mardiyyah.github.io"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   Amina Mardiyyah Rufai</a><sup>1</sup>,
-                 </span>
-                 
-                 <span class="author-block">
-                   <a href="https://www.linkedin.com/in/abeeb-afolabi-b07a75135/" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   Afolabi Abeeb</a><sup>2</sup>,
-                 </span>
-                 
-                 <span class="author-block">
-                   <a href="https://www.linkedin.com/in/esther-oduntan/"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   Esther Oduntan</a><sup>1</sup>,
-                 </span>
-     
-                 <span class="author-block">
-                   <a href="https://sites.google.com/a/lautech.edu.ng/otarulogun/"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   Tayo Arulogun</a><sup>2</sup>,
-                 </span><br>
-     
-                 <span class="author-block">
-                   <a href="https://oluwabukolaadegboro.github.io/"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   Oluwabukola Adegboro</a><sup>1</sup>,
-                 </span>
-     
-                 <span class="author-block">
-                   <a href="https://danielajisafe.github.io/" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   Daniel Ajisafe</a><sup>1</sup>
-                 </span>
-               </div>
-     
-               <div class="is-size-5 publication-authors">
-                 <span class="author-block"><sup>1</sup>African Institute For Mathematical Sciences,</span>
-                 <span class="author-block"><sup>2</sup>Ladoke Akintola University of Technology</span>
-               </div>
-     
-               <!-- <div class="is-size-6 publication-authors">
-                 <span class="author-block"><sup>*</sup>Equal Contribution</span>
-               </div> -->
-     
-               <div class="is-size-5 publication-authors">
-                 <b>DLI 2025</b>
-               </div>
-     
-     
-               <div class="column has-text-centered">
-                 <div class="publication-links">
-                   
-                   <!-- arXiv Link. -->
-                   <!-- style="background-color: rgba(239, 205, 190, 0.689);"> -->
-                   <span class="link-block" style="margin: 0.5em 0; display: inline-block;">
-                     <a href="https://arxiv.org/abs/2010.11123"
-                         target="_blank" 
-                         rel="noopener noreferrer">
-                         <button id="dataset-button"
-                           class="external-link button is-normal is-rounded is-light"
-                           style="background-color: rgba(239, 192, 198, 0.689);">
-                       <span class="icon">
-                           <i class="ai ai-arxiv"></i>
-                       </span>
-                       <span><b>arXiv</b></span>
-                     </button>
-                   </a>
-                 </span>
-     
-                   <!-- Code Link. -->
-                   <span class="link-block" style="margin: 0.5em 0; display: inline-block;">
-                     <a href="https://github.com/amina-mardiyyah/ASR-Nigeria-Pidgin" 
-                         target="_blank" 
-                         rel="noopener noreferrer">
-                         <button id="dataset-button"
-                           class="external-link button is-normal is-rounded is-light"
-                           style="background-color: rgba(240, 235, 193, 0.689);">
-                       <span class="icon">
-                           <i class="fab fa-github"></i>
-                       </span>
-                       <span><b>Code</b></span>
-                     </button>
-                   </a>
-                 </span>
-     
-                   <!-- Dataset Link. -->
-                   <span class="link-block" style="margin: 0.5em 0; display: inline-block;">
-                     <a href="https://huggingface.co/asr-nigerian-pidgin"
-                         target="_blank" 
-                         rel="noopener noreferrer">
-                       <button id="dataset-button"
-                         class="external-link button is-normal is-rounded is-light"
-                         style="background-color: rgba(200, 237, 191, 0.689);">
-                       <span class="icon">
-                           <i class="far fa-images"></i>
-                       </span>
-                     <span><b>Data</b></span>
-                   </button>
-                 </a>
-               </span>
-     
-                 
-                   <!-- Demo Link. -->
-                   <span class="link-block" style="margin: 0.5em 0; display: inline-block;">
-                     <a href="https://huggingface.co/spaces/asr-nigerian-pidgin/pidgin-demo"
-                         target="_blank" 
-                         rel="noopener noreferrer">
-                     <button id="demo-button"
-                             class="external-link button is-normal is-rounded is-light"
-                             style="background-color: rgba(192, 227, 239, 0.689);">
-                     <span class="icon">
-                         <i class="fas fa-desktop"></i>
-                     </span>
-                   <span><b>Demo</b></span>
-                 </button>
-               </a>
-             </span>
-     
-     
-                   <!--Paper citation Link. -->
-                   <span class="link-block" style="margin: 0.5em 0; display: inline-block;">
-                     <button id="citation-button"
-                             class="external-link button is-normal is-rounded is-light"
-                             style="background-color: rgba(242, 160, 125, 0.689);">
-                             <span class="icon">
-                         <i class="fas fa-book"></i>
-                       </span>
-                       <span><b>Citation</b></span>
-                     </button>
-                   </span>
-                   <script>
-                     document.getElementById("citation-button").addEventListener("click", function () {
-                       const bibtexSection = document.getElementById("BibTeX");
-                       if (bibtexSection) {
-                         bibtexSection.scrollIntoView({ behavior: "smooth" });
-                       }
-                     });
-                   </script>
-     
-                 </div>
-               </div>
-     
-             </div>
-           </div>
-         </div>
-       </div>
-     </section>
-     
-     <!-- <section class="hero teaser">
-       <div class="container is-max-desktop">
-         <div class="hero-body">
-           <video id="teaser" autoplay muted loop playsinline height="100%">
-             <source src="./static/videos/teaser.mp4"
-                     type="video/mp4">
-           </video>
-           <h2 class="subtitle has-text-centered">
-             <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-             free-viewpoint
-             portraits.
-           </h2>
-         </div>
-       </div>
-     </section> -->
-     
-     <section class="hero teaser">
-       <div class="container is-max-desktop">
-         <div class="hero-body">
-            <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
-              <source src="./static/videos/teaser.mp4"
-                      type="video/mp4">
-            </video> -->
-            <h2 class="subtitle has-text-centered"> 
-                <span class="ASR">
-                  <strong style="color:#05834c;">Our main story</strong>: 
-                </span> 
-                 Pidgin English is widely spoken in Africa by an estimate of 75 million Nigerian speakers and 5 million Ghanaians. 
-                  We <strong>curate</strong> a novel Nigerian Pidgin text-to-speech dataset, show that a pretrained state-of-the-art 
-                  model do not work well out-of-the-box, and
-                   <strong>reduce error rate by 59.84%</strong> 🚀      
-            </h2>
-            <!-- <h2 class="subtitle has-text-centered">
-              <span class="ASR">Pidgin</span> English is widely spoken in Africa by an estimate of 75 million Nigerian speakers and 5 million Ghanaians.
-            </h2> -->
-         </div>
-       </div>
-     </section>
-     
-     
-     <section class="hero is-light is-small">
-       <div class="hero-body">
-         <div class="container">
-           <!-- <h2 class="title is-5"> 💡 Key Contributions</h2> -->
-                 <!-- <span> This</span> key contributions of this work includes; -->
-                 <!-- <ul>
-                 <li> 🌐  A publicly accessible ASR system for Nigerian Pidgin </li> 
-                 <li> 🗣️  Free speech corpus for Nigerian Pidgin </li> 
-                 <li> 📝  First parallel (speech-to-text) Nigerian Pidgin data as a benchmark for further research. </li> 
-                 </ul> -->
-     
-           <!-- <h2 class="title is-5">  Key Contributions</h2>       
-                 <ul class="emoji-bullet-list">
-                   <li class="emoji-asr">   A publicly accessible ASR system for Nigerian Pidgin </li> 
-                   <li class="emoji-speech">  Free speech corpus for Nigerian Pidgin </li> 
-                   <li class="emoji-data">  First parallel (speech-to-text) Nigerian Pidgin data </li> 
-                   </ul> -->
-                  
-         </div>
-       </div>
-     </section>
-     
-     
-     <section class="section">
-       <div class="container is-max-desktop">
-         <!-- Abstract. -->
-         <div class="columns is-centered has-text-centered">
-           <div class="column is-four-fifths">
-             <h2 class="title is-3">Abstract</h2>
-             <div class="content has-text-justified">
-               <p>
-                 The prevalence of automatic speech recognition (ASR) systems in spoken language applications 
-                 has increased significantly in recent years. Notably, many African languages lack
-                 sufficient linguistic resources to support the robustness of these systems. This paper focuses
-                 on the development of an end-to-end speech recognition system customized for Nigerian
-                 Pidgin English.
-               </p>
-               <p>
-                 We investigated and evaluated different pretrained state-of-the-art architectures on a 
-                 new dataset. Our empirical results demonstrate a notable performance of the
-                 variant Wav2Vec2 XLSR-53 on our dataset, achieving a word error rate (WER) of 29.6% on
-                 the test set, surpassing other architectures such as NEMO QUARTZNET and Wav2Vec2.0
-                 BASE-100H in quantitative assessments. Additionally, we demonstrate that pretrained
-                 state-of-the-art architectures do not work well out-of-the-box. We performed zero-shot
-                 evaluation using XLSR-English as the baseline, chosen for its similarity to Nigerian Pidgin.
-                 This yielded a higher WER of 73.7%.
-               </p>
-               <p>
-                 By adapting this architecture to nuances represented in our dataset, we reduce error by 59.84%.
-                 This study underscores the potential for improving ASR systems for under-resourced languages
-                 like Nigerian Pidgin English, contributing to greater inclusion in speech technology applications. 
-                 We publicly release our unique parallel dataset (speech-to-text) on Nigerian Pidgin,
-                 as well as the model weights on Hugging Face. 
-                 Our code would be made available to foster future research from the community.
-               </p>
-             </div>
-           </div>
-         </div>
-         <!--/ Abstract. -->
-     
-     
-         <!-- Demo video. -->
-         <!-- <div class="columns is-centered has-text-centered">
-           <div class="column is-four-fifths">
-             <h2 class="title is-3">Demo</h2>
-             <div class="demo-video">
-               <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                       frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-             </div>
-           </div>
-         </div> -->
-         <!--/ Demo video. -->
-     
-       </div>
-     </section>
-     
-     
-     <section class="section">
-       <div class="container is-max-desktop">
-         <div class="columns is-centered">
-     
-           <!-- Visual Effects. -->
-           <!-- <div class="column">
-             <div class="content">
-               <h2 class="title is-3">Visual Effects</h2>
-               <p>
-                 Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-                 would be impossible without nerfies since it would require going through a wall.
-               </p>
-               <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-                 <source src="./static/videos/dollyzoom-stacked.mp4"
-                         type="video/mp4">
-               </video>
-             </div>
-           </div> -->
-           <!--/ Visual Effects. -->
-     
-           <!-- How it works  -->
-     
-           <!-- Dataset -->
-           <div class="column">
-             <h2 class="title is-3"> Dataset </h2>
-             <div class="columns is-centered">
-               <div class="column content">
-                 <p>
-                 The proposed dataset consists of the following;
-                 <ul>
-                   <li> 4,288 recorded utterances collected from 10 native speakers </li>
-                   <li> LIG-Aikuma app was used for recording the text data  </li>
-                   <li> Each uttereance averages between 8 and 17 words </li>
-                   <li> The average sentence length in the corpus is 86 characters </li>
-                   <li> The corresponding mean audio duration is approximately 17 seconds</li>
-                   <li> The dataset is partitioned into training, validation, and test sets </li>
-                 </ul>
-                 </p>
-     
-                 <!-- Figure 3: Topic Distribution in Dataset -->
-                 <figure id = "topic-distribution-dataset">
-                   <img src="./static/images/topic_distribution.svg" alt="Topic distribution for dataset " style="width: 100%; max-width: 800px; border-radius: 8px;">
-                 </figure>
-     
-                 <!-- Figure 4: Data Collection Summary -->
-                 <figure id = "data-collection-summary">
-                   <img src="./static/images/data_collection_summary.svg" alt="Data collection summary " style="width: 100%; max-width: 800px; border-radius: 8px;">
-                 </figure>
-     
-               </div>
-             </div>
-           </div>
-         </div>
-     
-     
-           <!-- Model Architecture -->
-           <div class="column">
-             <h2 class="title is-3"> Model Architecture </h2>
-             <div class="columns is-centered">
-               <div class="column content">
-                 <p> Several state-of-the-art ASR model architectures were evaluated. This includes; </p>
-                   <ul>
-                     <li> XLSR-English (zero-shot baseline) </li>
-                     <li> Nemo QuartzNet </li>
-                     <li> Wav2Vec 2.0 Base-100h </li> 
-                     <li> Wav2Vec XLSR-53 (our final model) </li>
-                   </ul>
-               </div>
-             </div>
-           </div>
-     
-     
-     <!-- Results -->
-     <div class="column">
-       <h2 class="title is-3"> Results </h2>
-       <div class="columns is-centered">
-         <div class="column content">
-           <p>
-             Word Error Rate (WER) was used to evaluate 
-             performance, with Wav2Vec XLSR-53 achieving 
-             the lowest WER and effectively capturing Nigerian 
-             Pidgin terms, though it struggled with accurate 
-             number recognition. The WER formula is given as follows;    
-             </p>
-     
-           <!-- WER Formula -->
-           <figure id = "WER">
-             <img src="./static/images/WER.png" alt="WER" style="width: 100%; max-width: 800px; border-radius: 8px;">
-           </figure>
-     
-           <p>
-             Furthermore, the qualitative results for all model architectures are summarized in Table 1. Table 2 
-             displays the quantitative results for the best performing model, Wav2Vec XLSR-53. Finally, table 3 
-             shows a failure case for Wav2Vec XLSR-53.   
-           </p>
-     
-           <!-- Table 1: Qualitative Results for all models -->
-           <figure id = "table-1-qualitative-results-all-models">
-             <img src="./static/images/table_1_results.png" alt="Table 1: Qualitative results for all models " style="width: 100%; max-width: 800px; border-radius: 8px;">
-             <img src="./static/images/table_1_results_contd.png" alt="Table 1: Qualitative Results Contd." style="width: 100%; max-width: 800px; border-radius: 8px;">
-           </figure>
-     
-           <!-- Figure 3: Model Comparison for all models -->
-           <figure id = "model-comparison-all-models">
-             <img src="./static/images/model_comparison.svg" alt="Model Comparison for all models " style="width: 100%; max-width: 800px; border-radius: 8px;">
-           </figure>
-     
-           <!-- Table 2: Quantitative Results for Wav2Vec XLSR-53 -->
-           <figure id = "table-2-qualitative-results-wav2vec-xlsr-53">
-             <img src="./static/images/table_2_results.png" alt="Table 2: Quantitative results for Wav2Vec XLSR-53" style="width: 100%; max-width: 800px; border-radius: 8px;">
-           </figure>
-     
-           <!-- Table 3: Failure case for Wav2Vec XLSR-53 -->
-           <figure id = "table-3-failure-case-wav2vec-xlsr-53">
-             <img src="./static/images/table_3_results.png" alt="Table 3: Failure case for Wav2Vec XLSR-53" style="width: 100%; max-width: 800px; border-radius: 8px;">
-           </figure>
-     
-         </div>
-       </div>
-     </div>
-     </div>
-     
-     
-         
-         <!-- Results. -->
-         <!-- <div class="columns is-centered">
-           <div class="column is-full-width">
-             <h2 class="title is-3">Results</h2>
-             <p> Word Error Rate (WER) was used to evaluate 
-               performance, with Wav2Vec XLSR-53 achieving 
-               the lowest WER and effectively capturing key 
-               Pidgin terms, though it struggled with accurate 
-               number recognition.</p> -->
-     
-             <!-- Interpolating. -->
-     
-             <!-- <h3 class="title is-4">Interpolating states</h3>
-             <div class="content has-text-justified">
-               <p>
-                 We can also animate the scene by interpolating the deformation latent codes of two input
-                 frames. Use the slider here to linearly interpolate between the left frame and the right
-                 frame.
-               </p>
-             </div>
-             <div class="columns is-vcentered interpolation-panel">
-               <div class="column is-3 has-text-centered">
-                 <img src="./static/images/interpolate_start.jpg"
-                      class="interpolation-image"
-                      alt="Interpolate start reference image."/>
-                 <p>Start Frame</p>
-               </div>
-               <div class="column interpolation-video-column">
-                 <div id="interpolation-image-wrapper">
-                   Loading...
-                 </div>
-                 <input class="slider is-fullwidth is-large is-info"
-                        id="interpolation-slider"
-                        step="1" min="0" max="100" value="0" type="range">
-               </div>
-               <div class="column is-3 has-text-centered">
-                 <img src="./static/images/interpolate_end.jpg"
-                      class="interpolation-image"
-                      alt="Interpolation end reference image."/>
-                 <p class="is-bold">End Frame</p>
-               </div>
-             </div>
-             <br/> -->
-     
-             <!--/ Interpolating. -->
-     
-             <!-- Re-rendering. -->
-     
-             <!-- <h3 class="title is-4">Re-rendering the input video</h3>
-             <div class="content has-text-justified">
-               <p>
-                 Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-                 viewpoint such as a stabilized camera by playing back the training deformations.
-               </p>
-             </div>
-             <div class="content has-text-centered">
-               <video id="replay-video"
-                      controls
-                      muted
-                      preload
-                      playsinline
-                      width="75%">
-                 <source src="./static/videos/replay.mp4"
-                         type="video/mp4">
-               </video>
-             </div> -->
-     
-             <!--/ Re-rendering. -->
-     <!-- 
-           </div>
-         </div> -->
-         <!--/ Animation. -->
-     
-     
-         <!-- Concurrent Work. -->
-         <!-- <div class="columns is-centered">
-           <div class="column is-full-width">
-             <h2 class="title is-3">Related Links</h2>
-     
-             <div class="content has-text-justified"> -->
-               <!-- <p>
-                 There's a lot of excellent work that was introduced around the same time as ours.
-               </p>
-               <p>
-                 <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-               </p>
-               <p>
-                 <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-                 both use deformation fields to model non-rigid scenes.
-               </p>
-               <p>
-                 Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-               </p>
-               <p>
-                 There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-               </p> -->
-             <!-- </div>
-           </div>
-         </div> -->
-         <!--/ Concurrent Work. -->
-     
-       </div>
-     </section>
-     
-     
-     <section class="section" id="BibTeX">
-       <div class="container is-max-desktop content">
-         <h2 class="title">BibTeX</h2>
-         <pre><code>
-           @misc{rufai2025endtoendtrainingautomaticspeech,
-                     author    = {Amina Mardiyyah Rufai and Afolabi Abeeb and Esther Oduntan and Tayo Arulogun and Oluwabukola Adegboro and Daniel Ajisafe},
-                     title     = {Towards End-to-End Training of Automatic Speech Recognition for Nigerian Pidgin},
-                     year      = {2025},
-                     eprint    = {2010.11123},
-                     archivePrefix = {arXiv},
-                     primaryClas = {eess.AS},
-                     url = {https://arxiv.org/abs/2010.11123}
-                 
-                   }
-         </code></pre>
-       </div>
-     
-     </section>
-     
-     
-     <footer class="footer">
-       <div class="container">
-         <div class="content has-text-centered">
-           <a class="icon-link"
-              href="https://arxiv.org/abs/2010.11123">
-             <i class="fas fa-file-pdf"></i>
-           </a>
-           <!-- <a class="icon-link" href="https://github.com/amina-mardiyyah/asr-nigerian-pidgin.github.io" class="external-link" disabled>
-             <i class="fab fa-github"></i>
-           </a> -->
-         </div>
-         <div class="columns is-centered">
-           <div class="column is-8">
-             <div class="content">
-               <p>
-                 This website is licensed under a <a rel="license"
-                                                     href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                 Commons Attribution-ShareAlike 4.0 International License</a>.
-               </p>
-               <p>
-                 The website source code is available on the <a
-                   href="https://github.com/nerfies/nerfies.github.io">Nerflies</a> Github page. 
-                   Please ensure you reference them appropriately if you do reuse their source code.
-                   Reference was also made to the 
-                   <a href="https://t2v-turbo.github.io">t2v-turbo</a>, 
-                   <a href="https://t2v-turbo-v2.github.io">t2v-turbo-v2</a>, and
-                   <a href="https://popspaper.github.io/pOps/">pops</a>
-                   website.
-                 
-               </p>
-             </div>
-           </div>
-         </div>
-       </div>
-     </footer>
-     
-     </body>
-     </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Towards End-to-End Training of Automatic Speech Recognition for Nigerian Pidgin">
+  <meta name="keywords" content="ASR, Nigerian Pidgin English, End-to-End">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Towards End-to-End Training of Automatic Speech Recognition for Nigerian Pidgin</title>
+ 
+  <!-- Do not uncomment -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet"
+      href="./static/css/style_bullet.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+</head>
+
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Towards End-to-End Training of Automatic Speech Recognition for Nigerian Pidgin</h1>
+          <div class="is-size-5 publication-authors">
+            
+            <span class="author-block">
+              <a href="https://amina-mardiyyah.github.io"
+              target="_blank" 
+              rel="noopener noreferrer">
+              Amina Mardiyyah Rufai</a><sup>1*</sup>,
+            </span>
+            
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/abeeb-afolabi-b07a75135/" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              Afolabi Abeeb</a><sup>2*</sup>,
+            </span>
+            
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/esther-oduntan/"
+              target="_blank" 
+              rel="noopener noreferrer">
+              Esther Oduntan</a><sup>1</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://sites.google.com/a/lautech.edu.ng/otarulogun/"
+              target="_blank" 
+              rel="noopener noreferrer">
+              Tayo Arulogun</a><sup>2</sup>,
+            </span><br>
+
+            <span class="author-block">
+              <a href="https://oluwabukolaadegboro.github.io/"
+              target="_blank" 
+              rel="noopener noreferrer">
+              Oluwabukola Adegboro</a><sup>1</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://danielajisafe.github.io/" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              Daniel Ajisafe</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>African Institute For Mathematical Sciences,</span>
+            <span class="author-block"><sup>2</sup>Ladoke Akintola University of Technology</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <b>DLI 2025</b>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              
+              <!-- arXiv Link. -->
+              <!-- style="background-color: rgba(239, 205, 190, 0.689);"> -->
+              <span class="link-block" style="margin: 0.5em 0; display: inline-block;">
+                <a href="https://arxiv.org/abs/2010.11123"
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    <button id="dataset-button"
+                      class="external-link button is-normal is-rounded is-light"
+                      style="background-color: rgba(239, 192, 198, 0.689);">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span><b>arXiv</b></span>
+                </button>
+              </a>
+            </span>
+
+              <!-- Code Link. -->
+              <span class="link-block" style="margin: 0.5em 0; display: inline-block;">
+                <a href="https://github.com/amina-mardiyyah/ASR-Nigeria-Pidgin" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    <button id="dataset-button"
+                      class="external-link button is-normal is-rounded is-light"
+                      style="background-color: rgba(240, 235, 193, 0.689);">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span><b>Code</b></span>
+                </button>
+              </a>
+            </span>
+
+              <!-- Dataset Link. -->
+              <span class="link-block" style="margin: 0.5em 0; display: inline-block;">
+                <a href="https://huggingface.co/asr-nigerian-pidgin"
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                  <button id="dataset-button"
+                    class="external-link button is-normal is-rounded is-light"
+                    style="background-color: rgba(200, 237, 191, 0.689);">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                <span><b>Data</b></span>
+              </button>
+            </a>
+          </span>
+
+            
+              <!-- Demo Link. -->
+              <span class="link-block" style="margin: 0.5em 0; display: inline-block;">
+                <a href="https://huggingface.co/spaces/asr-nigerian-pidgin/pidgin-demo"
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                <button id="demo-button"
+                        class="external-link button is-normal is-rounded is-light"
+                        style="background-color: rgba(192, 227, 239, 0.689);">
+                <span class="icon">
+                    <i class="fas fa-desktop"></i>
+                </span>
+              <span><b>Demo</b></span>
+            </button>
+          </a>
+        </span>
+
+
+              <!--Paper citation Link. -->
+              <span class="link-block" style="margin: 0.5em 0; display: inline-block;">
+                <button id="citation-button"
+                        class="external-link button is-normal is-rounded is-light"
+                        style="background-color: rgba(242, 160, 125, 0.689);">
+                        <span class="icon">
+                    <i class="fas fa-book"></i>
+                  </span>
+                  <span><b>Citation</b></span>
+                </button>
+              </span>
+              <script>
+                document.getElementById("citation-button").addEventListener("click", function () {
+                  const bibtexSection = document.getElementById("BibTeX");
+                  if (bibtexSection) {
+                    bibtexSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                });
+              </script>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video> -->
+      <h2 class="subtitle has-text-centered">
+        <span class="ASR">Pidgin</span> English is widely spoken in Africa by an estimate of 75 million Nigerian speakers and 5 million Ghanaians.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- <h2 class="title is-5"> 💡 Key Contributions</h2> -->
+            <!-- <span> This</span> key contributions of this work includes; -->
+            <!-- <ul>
+            <li> 🌐  A publicly accessible ASR system for Nigerian Pidgin </li> 
+            <li> 🗣️  Free speech corpus for Nigerian Pidgin </li> 
+            <li> 📝  First parallel (speech-to-text) Nigerian Pidgin data as a benchmark for further research. </li> 
+            </ul> -->
+
+      <h2 class="title is-5">  Key Contributions</h2>       
+            <ul class="emoji-bullet-list">
+              <li class="emoji-asr">   A publicly accessible ASR system for Nigerian Pidgin </li> 
+              <li class="emoji-speech">  Free speech corpus for Nigerian Pidgin </li> 
+              <li class="emoji-data">  First parallel (speech-to-text) Nigerian Pidgin data </li> 
+              </ul>
+    
+
+      <!-- <div id="results-carousel" class="carousel results-carousel"> -->
+          <!-- <div class="item item-steve"> -->
+          <!-- <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        <//div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video> -->
+        <!-- </div> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The prevalence of automatic speech recognition (ASR) systems in spoken language applications 
+            has increased significantly in recent years. Notably, many African languages lack
+            sufficient linguistic resources to support the robustness of these systems. This paper focuses
+            on the development of an end-to-end speech recognition system customized for Nigerian
+            Pidgin English.
+          </p>
+          <p>
+            We investigated and evaluated different pretrained state-of-the-art architectures on a 
+            new dataset. Our empirical results demonstrate a notable performance of the
+            variant Wav2Vec2 XLSR-53 on our dataset, achieving a word error rate (WER) of 29.6% on
+            the test set, surpassing other architectures such as NEMO QUARTZNET and Wav2Vec2.0
+            BASE-100H in quantitative assessments. Additionally, we demonstrate that pretrained
+            state-of-the-art architectures do not work well out-of-the-box. We performed zero-shot
+            evaluation using XLSR-English as the baseline, chosen for its similarity to Nigerian Pidgin.
+            This yielded a higher WER of 73.7%.
+          </p>
+          <p>
+            By adapting this architecture to nuances represented in our dataset, we reduce error by 59.84%.
+            This study underscores the potential for improving ASR systems for under-resourced languages
+            like Nigerian Pidgin English, contributing to greater inclusion in speech technology applications. 
+            We publicly release our unique parallel dataset (speech-to-text) on Nigerian Pidgin,
+            as well as the model weights on Hugging Face. 
+            Our code would be made available to foster future research from the community.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+
+    <!-- Demo video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Demo</h2>
+        <div class="demo-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Demo video. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <!-- <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Visual Effects</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div> -->
+      <!--/ Visual Effects. -->
+
+      <!-- How it works  -->
+
+      <!-- Dataset -->
+      <div class="column">
+        <h2 class="title is-3"> Dataset </h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+            The proposed dataset consists of the following;
+            <ul>
+              <li> 4,288 recorded utterances collected from 10 native speakers </li>
+              <li> LIG-Aikuma app was used for recording the text data  </li>
+              <li> Each uttereance averages between 8 and 17 words </li>
+              <li> The average sentence length in the corpus is 86 characters </li>
+              <li> The corresponding mean audio duration is approximately 17 seconds</li>
+              <li> The dataset is partitioned into training, validation, and test sets </li>
+            </ul>
+            </p>
+
+            <!-- Figure 3: Topic Distribution in Dataset -->
+            <figure id = "topic-distribution-dataset">
+              <img src="./static/images/topic_distribution.svg" alt="Topic distribution for dataset " style="width: 100%; max-width: 800px; border-radius: 8px;">
+            </figure>
+
+            <!-- Figure 4: Data Collection Summary -->
+            <figure id = "data-collection-summary">
+              <img src="./static/images/data_collection_summary.svg" alt="Data collection summary " style="width: 100%; max-width: 800px; border-radius: 8px;">
+            </figure>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <!-- Model Architecture -->
+      <div class="column">
+        <h2 class="title is-3"> Model Architecture </h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p> Several state-of-the-art ASR model architectures were evaluated. This includes; </p>
+              <ul>
+                <li> XLSR-English (zero-shot baseline) </li>
+                <li> Nemo QuartzNet </li>
+                <li> Wav2Vec 2.0 Base-100h </li> 
+                <li> Wav2Vec XLSR-53 (our final) </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+
+<!-- Results -->
+<div class="column">
+  <h2 class="title is-3"> Results </h2>
+  <div class="columns is-centered">
+    <div class="column content">
+      <p>
+        Word Error Rate (WER) was used to evaluate 
+        performance, with Wav2Vec XLSR-53 achieving 
+        the lowest WER and effectively capturing key 
+        Pidgin terms, though it struggled with accurate 
+        number recognition. The WER formula is given as follows;    
+        </p>
+
+      <!-- WER Formula -->
+      <figure id = "WER">
+        <img src="./static/images/WER.png" alt="WER" style="width: 100%; max-width: 800px; border-radius: 8px;">
+      </figure>
+
+      <p>
+        Furthermore, the qualitative results for all model architectures are summarized in Table 1. Table 2 
+        displays the quantitative results for the best performing model, Wav2Vec XLSR-53. Finally, table 3 
+        shows a failure case for Wav2Vec XLSR-53.   
+      </p>
+
+      <!-- Table 1: Qualitative Results for all models -->
+      <figure id = "table-1-qualitative-results-all-models">
+        <img src="./static/images/table_1_results.png" alt="Table 1: Qualitative results for all models " style="width: 100%; max-width: 800px; border-radius: 8px;">
+        <img src="./static/images/table_1_results_contd.png" alt="Table 1: Qualitative Results Contd." style="width: 100%; max-width: 800px; border-radius: 8px;">
+      </figure>
+
+      <!-- Figure 3: Model Comparison for all models -->
+      <figure id = "model-comparison-all-models">
+        <img src="./static/images/model_comparison.svg" alt="Model Comparison for all models " style="width: 100%; max-width: 800px; border-radius: 8px;">
+      </figure>
+
+      <!-- Table 2: Quantitative Results for Wav2Vec XLSR-53 -->
+      <figure id = "table-2-qualitative-results-wav2vec-xlsr-53">
+        <img src="./static/images/table_2_results.png" alt="Table 2: Quantitative results for Wav2Vec XLSR-53" style="width: 100%; max-width: 800px; border-radius: 8px;">
+      </figure>
+
+      <!-- Table 3: Failure case for Wav2Vec XLSR-53 -->
+      <figure id = "table-3-failure-case-wav2vec-xlsr-53">
+        <img src="./static/images/table_3_results.png" alt="Table 3: Failure case for Wav2Vec XLSR-53" style="width: 100%; max-width: 800px; border-radius: 8px;">
+      </figure>
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+    
+    <!-- Results. -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <p> Word Error Rate (WER) was used to evaluate 
+          performance, with Wav2Vec XLSR-53 achieving 
+          the lowest WER and effectively capturing key 
+          Pidgin terms, though it struggled with accurate 
+          number recognition.</p> -->
+
+        <!-- Interpolating. -->
+
+        <!-- <h3 class="title is-4">Interpolating states</h3>
+        <div class="content has-text-justified">
+          <p>
+            We can also animate the scene by interpolating the deformation latent codes of two input
+            frames. Use the slider here to linearly interpolate between the left frame and the right
+            frame.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_end.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">End Frame</p>
+          </div>
+        </div>
+        <br/> -->
+
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+        <div class="content has-text-justified">
+          <p>
+            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+            viewpoint such as a stabilized camera by playing back the training deformations.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/replay.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+
+        <!--/ Re-rendering. -->
+<!-- 
+      </div>
+    </div> -->
+    <!--/ Animation. -->
+
+
+    <!-- Concurrent Work. -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified"> -->
+          <!-- <p>
+            There's a lot of excellent work that was introduced around the same time as ours.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+          </p>
+          <p>
+            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+            both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+          </p> -->
+        <!-- </div>
+      </div>
+    </div> -->
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @misc{rufai2025endtoendtrainingautomaticspeech,
+                author    = {Amina Mardiyyah Rufai and Afolabi Abeeb and Esther Oduntan and Tayo Arulogun and Oluwabukola Adegboro and Daniel Ajisafe},
+                title     = {Towards End-to-End Training of Automatic Speech Recognition for Nigerian Pidgin},
+                year      = {2025},
+                eprint    = {2010.11123},
+                archivePrefix = {arXiv},
+                primaryClas = {eess.AS},
+                url = {https://arxiv.org/abs/2010.11123}
+            
+              }
+    </code></pre>
+  </div>
+
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/abs/2010.11123">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <!-- <a class="icon-link" href="https://github.com/amina-mardiyyah/asr-nigerian-pidgin.github.io" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            The website source code is available on the <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerflies</a> Github page. 
+              Please ensure you reference them appropriately if you do reuse their source code.
+              Reference was also made to the 
+              <a href="https://t2v-turbo.github.io">t2v-turbo</a>, 
+              <a href="https://t2v-turbo-v2.github.io">t2v-turbo-v2</a>, and
+              <a href="https://popspaper.github.io/pOps/">pops</a>
+              website.
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
