@@ -406,7 +406,7 @@
             We investigated and evaluated different pretrained state-of-the-art architectures on a 
             new dataset. Our empirical results demonstrate a notable performance of the
             variant Wav2Vec2 XLSR-53 on our dataset, achieving a word error rate (WER) of 29.6% on
-            the test set, surpassing other architectures such as NEMO QUARTZNET and Wav2Vec2.0
+            the test set, surpassing other architectures such as NEMO QUARTZNET and Wav2Vec2
             BASE-100H in quantitative assessments. Additionally, we demonstrate that pretrained
             state-of-the-art architectures do not work well out-of-the-box. We performed zero-shot
             evaluation using XLSR-English as the baseline, chosen for its similarity to Nigerian Pidgin.
@@ -514,8 +514,8 @@
               <ul>
                 <li> XLSR-English (zero-shot baseline) </li>
                 <li> Nemo QuartzNet </li>
-                <li> Wav2Vec 2.0 Base-100h </li> 
-                <li> Wav2Vec XLSR-53 (our final model) </li>
+                <li> Wav2Vec2-Base-100h </li> 
+                <li> Wav2Vec2-XLSR-53 (our final model) </li>
               </ul>
           </div>
         </div>
@@ -529,7 +529,7 @@
     <div class="column content">
       <p>
         Word Error Rate (WER) was used to evaluate 
-        performance, with Wav2Vec XLSR-53 achieving 
+        performance, with Wav2Vec2-XLSR-53 achieving 
         the lowest WER and effectively capturing Nigerian 
         Pidgin terms, though it struggled with accurate 
         number recognition. The WER formula is given as follows;    
@@ -542,8 +542,8 @@
 
       <p>
         Furthermore, the qualitative results for all model architectures are summarized in Table 1. Table 2 
-        displays the quantitative results for the best performing model, Wav2Vec XLSR-53. Finally, table 3 
-        shows a failure case for Wav2Vec XLSR-53.   
+        displays the quantitative results for the best performing model, Wav2Vec2-XLSR-53. Finally, table 3 
+        shows a failure case for Wav2Vec2-XLSR-53.   
       </p>
 
       
@@ -565,12 +565,12 @@
 
       <!-- Table 2: Quantitative Results for Wav2Vec XLSR-53 -->
       <figure id = "table-2-qualitative-results-wav2vec-xlsr-53">
-        <img src="./static/images/table_2_results.png" alt="Table 2: Quantitative results for Wav2Vec XLSR-53" style="width: 100%; max-width: 800px; border-radius: 8px;">
+        <img src="./static/images/table_2_results.png" alt="Table 2: Quantitative results for Wav2Vec2-XLSR-53" style="width: 100%; max-width: 800px; border-radius: 8px;">
       </figure>
 
       <!-- Table 3: Failure case for Wav2Vec XLSR-53 -->
       <figure id = "table-3-failure-case-wav2vec-xlsr-53">
-        <img src="./static/images/table_3_results.png" alt="Table 3: Failure case for Wav2Vec XLSR-53" style="width: 100%; max-width: 800px; border-radius: 8px;">
+        <img src="./static/images/table_3_results.png" alt="Table 3: Failure case for Wav2Vec2-XLSR-53" style="width: 100%; max-width: 800px; border-radius: 8px;">
       </figure>
 
     </div>
